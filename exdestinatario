@@ -1,0 +1,15 @@
+var prompt = require('prompt'); 
+
+prompt.start(); 
+
+prompt.get(['nome', 'sobrenome'], function(err, result) {
+
+    var destinatario
+    var nome = result.nome
+    let sobrenome = result.sobrenome
+    var endereço = 'Rua Sebastião, número 311, bairro Centro'
+    destinatario = `\n\nDestinatario: ${nome} ${sobrenome}\nEndereço: ${endereço}`
+    
+    console.log(destinatario)
+
+});

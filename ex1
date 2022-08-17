@@ -1,0 +1,17 @@
+var prompt = require('prompt'); 
+
+prompt.start(); 
+
+prompt.get(['nascimento'], function (err, result){
+    //
+    const dataAtual = new Date;
+    const anoAtual = dataAtual.getFullYear();
+    
+    // lendo o ano de nascimento
+    var nascimento = result.nascimento
+    
+    // fazendo o calculo e dando o resultado
+    var idade = anoAtual - nascimento
+    console.log("Calculo de idade")
+    console.log(`\nA idade é ${idade} anos.`)
+}); 

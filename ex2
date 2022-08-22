@@ -1,0 +1,9 @@
+var prompt = require('prompt'); 
+
+prompt.start(); 
+
+prompt.get(['num1', 'num2'], function (err, result){
+
+  console.log('Calculo das médias')
+  var num1 = number(result.num1)
+  

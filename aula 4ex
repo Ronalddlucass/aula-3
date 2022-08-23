@@ -1,0 +1,49 @@
+codigo html
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de temperatura</h1>
+    <script src="onde eu coloco o arquivo js para imprimir na tela.js"></script>
+</body>
+</html>
+
+ex 1 
+//entrada dos dados
+var real = Number(window.prompt("Digite um valor em reais para conversão: "))
+
+//processamento dos dados
+var dolar = real/5.30
+
+//saida dos dados
+var resultado = (`O valor ${real}R$ em dolar é igual a ${dolar}`)
+document.writeln(resultado)
+
+
+ex 2
+//entrada de dados 
+var temp = Number(window.prompt("Digite uma temperatura em celsius: "))
+
+// processando os dados
+var farh = (temp * (9/5)) + 32
+
+// saida de dados
+document.writeln(`A temperatura ${temp}°C em farhreint é ${farh}°F`)
+
+
+ex 3 
+
+// entrada de dados
+var valor = Number(window.prompt('Digite o valor do produto: '))
+
+// processamento de dados
+var imposto = 0.6*valor
+var total = imposto + valor
+
+// saida de dados
+document.writeln(`O valor do imposto é ${imposto} e o valor digitado acrescido do imposto é ${total}`)

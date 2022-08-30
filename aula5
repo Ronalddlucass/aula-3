@@ -1,0 +1,18 @@
+// entrada
+var ladoa = Number(window.prompt('Digite o lado a do triângulo'))
+var ladob = Number(window.prompt('Digite o lado b do triângulo'))
+var ladoc = Number(window.prompt('Digite o lado c do triângulo'))
+
+// processamento
+var equilatero = ladoa == ladob && ladoc == ladob 
+var isosceles = ladoa == ladob || ladob == ladoc || ladoc == ladoa
+var escaleno = ladoa != ladob && ladoa != ladoc && ladob != ladoc 
+
+
+// saida
+document.writeln(`Lado a = ${ladoa} \n
+                  lado b = ${ladob}\n
+                  lado c = ${ladoc}` )
+document.writeln('É equilatero ? ' + equilatero )
+document.writeln('É isósceles ? ' + isosceles)
+document.writeln('É escaleno ? ' + escaleno)

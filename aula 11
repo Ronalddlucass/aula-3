@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://th.bing.com/th/id/R.e717fb097cd18e345eb9241133df22ed?rik=9eP5EWx4BFdQlA&riu=http%3a%2f%2fdiariobahia.com.br%2fwp-content%2fuploads%2f2018%2f03%2fFTC-Itabuna-site.jpg&ehk=wlT%2f8M0ED%2bQlpG9zecWkp7wlS4RSPK3WIUFzn%2fJM3PY%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto
+        }
+
+        form {
+            background-color: white;
+            max-width: 500px;
+            height: 450px;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        form h1 {
+            text-align: center;
+            font-size: 40px;
+            color: rgb(38, 79, 190)
+        }
+
+        form p {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .inupt-single {
+            position: relative;
+            margin: 5px 0;
+        }
+
+        .inupt-single label {
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            transition: all 1;
+            cursor: text;
+        }
+
+        .input {
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid #ccc;
+            outline: 0;
+        }
+
+        form .inupt-single .input:focus~label,
+        form .inupt-single .input:valid~label {
+            transform: translateY(-20px);
+            font-size: 12px;
+        }
+
+        button {
+            width: 150px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            max-width: 200px;
+            height: 30px;
+            border-color: black;
+        }
+        textarea{
+            border-color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="form-container">
+        <div class="container">
+            <form>
+                <div id="formone">
+                    <h1>Olá Aluno</h1>
+                    <p>Preencha o formulário abaixo.</p>
+                    <div class="inupt-single">
+                        <input type="text" id="nome" class="input" autocomplete="off" required>
+                        <label for="nome">Seu nome completo</label><br><br>
+                    </div>
+                    <div class="inupt-single">
+                        <input type="text" id="unidade" class="input" autocomplete="off" required>
+                        <label for="unidade">Cidade da sua unidade de ensino</label><br><br>
+                    </div>
+                    <div class="inupt-single">
+                        <input type="date" id="nascimento" class="input" autocomplete="off" required>
+                        <label for="nascimento"></label><br><br>
+                    </div>
+                    <p><button type="button" onclick="imprimir()"> Resultado </button></p>
+                    <textarea name="resultado" id="resultado" cols="30" rows="6"></textarea>
+                </div>
+        </div>
+        </form>
+    </section>
+
+    <script>
+        function imprimir() {
+            // recebendo as entradas e atrelando as variavéis
+            var nome = document.getElementById("nome")
+            var nascimento = document.getElementById("nascimento")
+            var unidade = document.getElementById("unidade")
+
+            // saida de dados
+
+            resultado.value = "Olá " + nome.value + " você nasceu no dia " +
+                nascimento.value + " e está cursando Sistemas de informação na unidade de " + unidade.value
+        }
+    </script>
+</body>
+
+</html>
